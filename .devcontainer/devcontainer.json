@@ -1,0 +1,35 @@
+{
+  "name": "CS421 Haskell Dev",
+  "image": "mattox/cs421-haskell-dev:latest",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "haskell.haskell",
+        "justusadam.language-haskell"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/bin/bash",
+            "args": ["-l"]
+          }
+        }
+      }
+    }
+  },
+
+  // Mount workspace and set working directory
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/student/workspace,type=bind",
+  "workspaceFolder": "/home/student/workspace",
+
+  // Run as the student user (important for PATH and permissions)
+  "remoteUser": "student",
+
+  // Fix permissions on mounted workspace after container creation
+  "postCreateCommand": "sudo chown -R student:student /home/student/workspace",
+
+  // Keep container running
+  "overrideCommand": true
+}
