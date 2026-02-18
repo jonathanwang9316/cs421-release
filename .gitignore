@@ -1,0 +1,83 @@
+# Stack build artifacts
+.stack-work/
+*.cabal
+dist/
+dist-newstyle/
+
+# Cabal artifacts
+cabal.project.local
+cabal.project.local~
+.ghc.environment.*
+
+# Haskell compiled files
+*.hi
+*.o
+*.p_hi
+*.p_o
+*.dyn_hi
+*.dyn_o
+*.chi
+*.chs.h
+*.prof
+*.aux
+*.hp
+*.eventlog
+*.tix
+
+# GHCi
+.ghci
+.hpc/
+
+# Editor/IDE files
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.sw?
+
+# Emacs
+\#*\#
+.\#*
+*~
+TAGS
+
+# IntelliJ/IDEA
+.idea/
+*.iml
+
+# Haskell Language Server
+hie.yaml
+.hie/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Test artifacts
+.HTF/
+
+# Nix
+result
+result-*
+
+# Local environment files
+.env
+.env.local
