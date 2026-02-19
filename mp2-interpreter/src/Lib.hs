@@ -98,7 +98,7 @@ liftCompOp op (IntVal x) (IntVal y) = BoolVal $ op x y
 liftCompOp _ _ _ = ExnVal "Cannot lift"
 
 --- Eval
---- ----
+--- ---- Note: Used the outline given in lecture slides when applicable.
 
 eval :: Exp -> Env -> Val
 
@@ -190,6 +190,7 @@ exec (SetStmt var e) penv env = ("", penv, newEnv)
     where newEnv = H.union (H.fromList [(var, eval e env)]) env
 
 --- ### Sequencing
+--- ### Note: Asked Gemini for hints regarding sequencing (creating recursive helper) but not the code itself.
 
 exec (SeqStmt e) penv env = helper e penv env
     where
