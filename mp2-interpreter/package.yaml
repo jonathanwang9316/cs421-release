@@ -14,6 +14,8 @@ dependencies:
 - base >= 4.7 && < 5
 - unordered-containers >= 0.2
 - parsec
+- Win32
+- template-haskell
 
 library:
   source-dirs: src
